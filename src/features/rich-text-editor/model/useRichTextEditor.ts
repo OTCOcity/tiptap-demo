@@ -16,6 +16,7 @@ export function useRichTextEditor(options: UseRichTextEditorOptions = {}) {
     editorProps: {
       attributes: {
         class: 'rich-text-editor__content',
+        spellcheck: 'false',
       },
     },
   })

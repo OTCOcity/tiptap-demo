@@ -185,6 +185,144 @@ p {
   pointer-events: none;
 }
 
+.proofreading-error {
+  cursor: pointer;
+  border-radius: 3px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.proofreading-error--red {
+  background: rgba(239, 68, 68, 0.1);
+  text-decoration-color: #dc2626;
+}
+
+.proofreading-error--yellow {
+  background: rgba(245, 158, 11, 0.13);
+  text-decoration-color: #d97706;
+}
+
+.proofreading-error--purple {
+  background: rgba(147, 51, 234, 0.11);
+  text-decoration-color: #7e22ce;
+}
+
+.proofreading-error--solid {
+  text-decoration-style: solid;
+}
+
+.proofreading-error--dashed {
+  text-decoration-style: dashed;
+}
+
+.proofreading-menu {
+  position: fixed;
+  z-index: 20;
+  width: min(328px, calc(100vw - 24px));
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+}
+
+.proofreading-menu__header {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.proofreading-menu__kind {
+  margin: 0 0 4px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proofreading-menu__title {
+  margin: 0;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.proofreading-menu__close {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d7deea;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #475467;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.proofreading-menu__selection {
+  padding: 12px 14px 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.proofreading-menu__selection strong {
+  color: #111827;
+}
+
+.proofreading-menu__actions {
+  display: grid;
+  gap: 8px;
+  padding: 12px 14px;
+}
+
+.proofreading-menu__suggestion,
+.proofreading-menu__ignore {
+  min-height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.proofreading-menu__suggestion {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+  text-align: left;
+  padding: 0 12px;
+}
+
+.proofreading-menu__suggestion:hover {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.proofreading-menu__empty {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.proofreading-menu__ignore {
+  width: calc(100% - 28px);
+  margin: 0 14px 14px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475467;
+}
+
+.proofreading-menu__ignore:hover {
+  border-color: #94a3b8;
+}
+
 .editor-test-actions {
   display: flex;
   justify-content: space-between;

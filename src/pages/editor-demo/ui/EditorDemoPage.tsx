@@ -1,4 +1,8 @@
 import { RichTextEditor } from '../../../features/rich-text-editor'
+import {
+  mockProofreadingAnnotations,
+  mockProofreadingText,
+} from '../../../features/rich-text-editor/model/proofreading/mockProofreading'
 
 export function EditorDemoPage() {
   return (
@@ -16,8 +20,9 @@ export function EditorDemoPage() {
       </section>
 
       <RichTextEditor
-        initialContent="<p>Начните писать текст здесь. Это минимальная интеграция TipTap, готовая к расширению.</p>"
+        initialContent={`<p>${mockProofreadingText}</p>`}
         placeholder="Напишите текст..."
+        proofreadingAnnotations={mockProofreadingAnnotations}
       />
     </main>
   )

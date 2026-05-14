@@ -1,0 +1,335 @@
+{
+  "state": "CHECKED_SUCCESS",
+  "progress": 0,
+  "message": "проверка документа успешно завершена",
+  "html": "Аднажды в студеную зимнюю пору я из лесу вышил был сильный мароз, гляжу поднимается мдленно в гору лошатка.",
+  "annotations": {
+    "kinds": {
+      "mkSpelling": "орфография",
+      "mkPunctuation": "пунктуация",
+      "mkYo": "ё"
+    },
+    "annotations": [
+      {
+        "id": 0,
+        "kind": "mkSpelling",
+        "selection": "Аднажды",
+        "position": [
+          {
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "description": "ошибка в безударном гласном",
+        "suggestion": "<a data-kind=\"replace-whole\" title=\"Заменить (Alt + Insert)\" data-word=\"Однажды\"><u>О</u>днажды</a>",
+        "explanation": "в соответствии с общим правилом написание букв на месте безударных гласных в корнях устанавливается путем проверки словами и формами с тем же корнем, в которых проверяемый гласный находится под ударением; если написание не может быть установлено по общему правилу (непроверяемых гласных), то оно определяется в словарном порядке <a href=\"https://stage-tochka-litera5-standalone.dcdp.bank24.int/library/OGL/a.1.2.1.html\" target=\"_blank\">орфография 1.2.1</a>",
+        "rule": "a.1.2.1",
+        "tuid": "#dlg66q",
+        "attrs": []
+      },
+      {
+        "id": 6,
+        "kind": "mkYo",
+        "selection": "студеную",
+        "position": [
+          {
+            "start": 10,
+            "end": 17
+          }
+        ],
+        "description": " не проставлена буква «ё»",
+        "suggestion": " <a data-kind=\"replace-whole\" title=\"Заменить (Alt + Insert)\" data-word=\"студёную\">студ<u>ё</u>ную</a>",
+        "explanation": "последовательное употребление буквы <i></i><b><i>ё</i></b><i></i> отражает орфоэпическую норму, поэтому такое написание более корректно <a href=\"https://stage-tochka-litera5-standalone.dcdp.bank24.int/library/OGL/h.1.4.html\" target=\"_blank\">ё 1.4</a>",
+        "rule": "h.1.4",
+        "tuid": "#sssono",
+        "attrs": []
+      },
+      {
+        "id": 5,
+        "kind": "mkPunctuation",
+        "selection": "вышил был",
+        "position": [
+          {
+            "start": 41,
+            "end": 49
+          }
+        ],
+        "description": " возможно, пропущена запятая",
+        "suggestion": " поставьте запятую в интервале, если употреблены однородные сказуемые или части бессоюзного предложения",
+        "explanation": "запятая ставится: 1) между однородными членами предложения, не соединёнными союзами (<i></i><b><i>не нашёл</i></b><i> ничего подходящего, </i><b><i>решил уйти</i></b><i></i>); 2) между частями бессоюзного сложного предложения (<i></i><b><i>заказал</i></b><i> их вчера, </i><b><i>привезли</i></b><i> уже сегодня</i>) <a href=\"https://stage-tochka-litera5-standalone.dcdp.bank24.int/library/OGL/b.4.1.html\" target=\"_blank\">пунктуация 4.1</a>",
+        "rule": "b.4.1",
+        "tuid": "#o2hpal",
+        "attrs": []
+      },
+      {
+        "id": 1,
+        "kind": "mkSpelling",
+        "selection": "мароз",
+        "position": [
+          {
+            "start": 59,
+            "end": 63
+          }
+        ],
+        "description": "ошибка в безударном гласном / неизвестное слово",
+        "suggestion": "<a data-kind=\"replace-whole\" title=\"Заменить (Alt + Insert)\" data-word=\"мороз\">м<u>о</u>роз</a>, <a data-kind=\"replace-whole\" title=\"Заменить (Alt + Insert)\" data-word=\"марок\">маро<u>к</u></a>",
+        "explanation": "в соответствии с общим правилом написание букв на месте безударных гласных в корнях устанавливается путем проверки словами и формами с тем же корнем, в которых проверяемый гласный находится под ударением; если написание не может быть установлено по общему правилу (непроверяемых гласных), то оно определяется в словарном порядке <a href=\"https://stage-tochka-litera5-standalone.dcdp.bank24.int/library/OGL/a.1.2.1.html\" target=\"_blank\">орфография 1.2.1</a>",
+        "rule": "a.1.2.1",
+        "tuid": "#dlg66q",
+        "attrs": []
+      },
+      {
+        "id": 4,
+        "kind": "mkPunctuation",
+        "selection": "гляжу поднимается",
+        "position": [
+          {
+            "start": 66,
+            "end": 82
+          }
+        ],
+        "description": " возможно, пропущена запятая",
+        "suggestion": " поставьте запятую в выделенном отрезке (между «гляжу» и «поднимается»)",
+        "explanation": "запятые ставятся в случаях, которые бывает сложно разграничить: 1) между частями бессоюзного сложного предложения, где также возможно двоеточие или тире (<i>метель не утихала, небо не прояснялось</i>; <i>всё может быть иначе: он просто не придёт</i>); 2) между частями сложноподчинённого предложения (<i>давайте разберёмся, можно ли их носить</i>); 3) при вводных конструкциях (<i>потом уже, я думаю, разберётесь</i>) и др. <a href=\"https://stage-tochka-litera5-standalone.dcdp.bank24.int/library/OGL/b.7.3.1.html\" target=\"_blank\">пунктуация 7.3.1</a>",
+        "rule": "b.7.3.1",
+        "tuid": "#otw6z0",
+        "attrs": []
+      },
+      {
+        "id": 2,
+        "kind": "mkSpelling",
+        "selection": "мдленно",
+        "position": [
+          {
+            "start": 84,
+            "end": 90
+          }
+        ],
+        "description": "возможно, опечатка",
+        "suggestion": "<a data-kind=\"replace-whole\" title=\"Заменить (Alt + Insert)\" data-word=\"медленно\">м<u>е</u>дленно</a>",
+        "explanation": "при наборе слова была случайно пропущена буква <a href=\"https://stage-tochka-litera5-standalone.dcdp.bank24.int/library/OGL/a.7.1.html\" target=\"_blank\">орфография 7.1</a> <a data-kind=\"add-word\" data-word=\"мдленно\"></a>",
+        "rule": "a.7.1",
+        "tuid": "#0ljtl7",
+        "attrs": []
+      },
+      {
+        "id": 3,
+        "kind": "mkSpelling",
+        "selection": "лошатка",
+        "position": [
+          {
+            "start": 99,
+            "end": 105
+          }
+        ],
+        "description": "ошибка в написании парной глухой согласной буквы / возможно, опечатка",
+        "suggestion": "<a data-kind=\"replace-whole\" title=\"Заменить (Alt + Insert)\" data-word=\"лошадка\">лоша<u>д</u>ка</a>, <a data-kind=\"replace-whole\" title=\"Заменить (Alt + Insert)\" data-word=\"лошака\">лош<u>ак</u>а</a>",
+        "explanation": "парные глухие согласные звуки <i></i><b><i>п</i></b><i></i>, <i></i><b><i>ф</i></b><i></i>, <i></i><b><i>т</i></b><i></i>, <i></i><b><i>с</i></b><i></i>, <i></i><b><i>к</i></b><i></i>, <i></i><b><i>ш</i></b><i></i> на конце слова и перед глухими согласными могут передаваться соответственно буквами <i></i><b><i>п</i></b><i></i> или <i></i><b><i>б</i></b><i></i>, <i></i><b><i>ф</i></b><i></i> или <i></i><b><i>в</i></b><i></i>, <i></i><b><i>т</i></b><i></i> или <i></i><b><i>д</i></b><i></i>, <i></i><b><i>с</i></b><i></i> или <i></i><b><i>з</i></b><i></i>, <i></i><b><i>к</i></b><i></i> или <i></i><b><i>г</i></b><i></i>, <i></i><b><i>ш</i></b><i></i> или <i></i><b><i>ж</i></b><i></i>; чтобы правильно написать согласную букву, нужно подобрать другую форму того же слова или другое слово, где в том же корне, приставке или суффиксе проверяемый согласный находится перед гласным или перед <i></i><b><i>р</i></b><i></i>, <i></i><b><i>л</i></b><i></i>, <i></i><b><i>м</i></b><i></i>, <i></i><b><i>н</i></b><i></i>, <i></i><b><i>в</i></b><i></i>, а также перед <i></i><b><i>j</i></b><i></i> (на письме – перед <i></i><b><i>ъ</i></b><i></i> и <i></i><b><i>ь</i></b><i></i>) <a href=\"https://stage-tochka-litera5-standalone.dcdp.bank24.int/library/OGL/a.1.3.1.1.html\" target=\"_blank\">орфография 1.3.1.1</a>",
+        "rule": "a.1.3.1.1",
+        "tuid": "#r5nrou",
+        "attrs": []
+      }
+    ],
+    "otherErrors": {},
+    "water": {
+      "content": 0.05552470684051514
+    },
+    "collocations": {
+      "bigram": 0,
+      "trigram": 0,
+      "ngram": 0
+    }
+  },
+  "stats": {
+    "annotations": [
+      {
+        "kind": "mkSpelling",
+        "name": "орфография",
+        "count": 4
+      },
+      {
+        "kind": "mkPunctuation",
+        "name": "пунктуация",
+        "count": 2
+      },
+      {
+        "kind": "mkYo",
+        "name": "ё",
+        "count": 1
+      }
+    ],
+    "fleschIndex": {
+      "value": 59.89611053466797,
+      "comment": "Уровень удобочитаемости ниже среднего (уровень старших классов)"
+    },
+    "fogIndex": {
+      "value": 10.065982818603516,
+      "comment": "Понятный текст (уровень учащегося 6—7 классов)"
+    },
+    "statistic": {
+      "chars": 107,
+      "charsNoSpace": 90,
+      "syllables": 37,
+      "words": 18,
+      "sentenses": 1,
+      "paragraphs": 1,
+      "headers": 0,
+      "uniqueWords": 13,
+      "uniqueForms": 13,
+      "wordsInSentence": 18,
+      "lettersInWord": 4.888888835906982,
+      "wordsInParagraph": 18,
+      "sentencesInParagraph": 1,
+      "syllablesInWord": 2.055555582046509,
+      "price": 1
+    },
+    "top": {
+      "mostFrequentWords": [
+        {
+          "word": "поднима*",
+          "value": 1
+        },
+        {
+          "word": "сильн*",
+          "value": 1
+        },
+        {
+          "word": "гляж*",
+          "value": 1
+        },
+        {
+          "word": "зимн*",
+          "value": 1
+        },
+        {
+          "word": "пор*",
+          "value": 1
+        },
+        {
+          "word": "выш*",
+          "value": 1
+        },
+        {
+          "word": "гор*",
+          "value": 1
+        },
+        {
+          "word": "был*",
+          "value": 1
+        },
+        {
+          "word": "лес*",
+          "value": 1
+        },
+        {
+          "word": "студен*",
+          "value": 1
+        }
+      ],
+      "mostFrequentForms": [
+        {
+          "word": "лесу",
+          "value": 1
+        },
+        {
+          "word": "был",
+          "value": 1
+        },
+        {
+          "word": "студёную",
+          "value": 1
+        },
+        {
+          "word": "сильный",
+          "value": 1
+        },
+        {
+          "word": "вышил",
+          "value": 1
+        },
+        {
+          "word": "зимнюю",
+          "value": 1
+        },
+        {
+          "word": "гляжу",
+          "value": 1
+        },
+        {
+          "word": "пору",
+          "value": 1
+        },
+        {
+          "word": "поднимается",
+          "value": 1
+        },
+        {
+          "word": "гору",
+          "value": 1
+        }
+      ],
+      "mostLongWords": [
+        {
+          "word": "поднимается",
+          "value": 11
+        },
+        {
+          "word": "студёную",
+          "value": 8
+        },
+        {
+          "word": "лошатка",
+          "value": 7
+        },
+        {
+          "word": "мдленно",
+          "value": 7
+        },
+        {
+          "word": "аднажды",
+          "value": 7
+        },
+        {
+          "word": "сильный",
+          "value": 7
+        },
+        {
+          "word": "зимнюю",
+          "value": 6
+        },
+        {
+          "word": "вышил",
+          "value": 5
+        },
+        {
+          "word": "мароз",
+          "value": 5
+        },
+        {
+          "word": "гляжу",
+          "value": 5
+        }
+      ],
+      "mostFrequentProperName": []
+    },
+    "seo": {
+      "nauseaClassic": 2.6457512378692627,
+      "nauseaAcademic": 0,
+      "water": 0.05552470684051514,
+      "bigramCount": 0,
+      "trigramCount": 0,
+      "ngramCount": 0,
+      "wrongColls": []
+    },
+    "content": {
+      "userWords": "[нет]"
+    },
+    "time": {
+      "write": "32 с",
+      "spell": "7 с",
+      "read": "4 с"
+    }
+  },
+  "time": "1778753357",
+  "signature": "1aaa89a14092d4e8f57ada76c371e721"
+}
