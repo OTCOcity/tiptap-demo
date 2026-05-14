@@ -8,9 +8,13 @@ import {
 
 type EditorTestActionsProps = {
   editor: Editor
+  onExportHtml: () => void
 }
 
-export function EditorTestActions({ editor }: EditorTestActionsProps) {
+export function EditorTestActions({
+  editor,
+  onExportHtml,
+}: EditorTestActionsProps) {
   return (
     <section className="editor-test-actions" aria-label="Feature test actions">
       <div>
@@ -40,6 +44,14 @@ export function EditorTestActions({ editor }: EditorTestActionsProps) {
             {emoji}
           </button>
         ))}
+
+        <button
+          type="button"
+          className="test-action-button"
+          onClick={onExportHtml}
+        >
+          Экспорт HTML
+        </button>
       </div>
     </section>
   )

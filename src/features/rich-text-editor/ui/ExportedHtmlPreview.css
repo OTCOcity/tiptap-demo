@@ -1,0 +1,117 @@
+.exported-html-preview {
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid #cfd7e6;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.exported-html-preview__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 18px;
+  border-bottom: 1px solid #d9e0ec;
+  background: #edf4ff;
+}
+
+.exported-html-preview__eyebrow {
+  margin: 0 0 4px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exported-html-preview__title {
+  margin: 0;
+  color: #152033;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.exported-html-preview__content {
+  padding: 22px;
+  color: #202939;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.exported-html-preview__content > *:first-child {
+  margin-top: 0;
+}
+
+.exported-html-preview__content > *:last-child {
+  margin-bottom: 0;
+}
+
+.exported-html-preview__content p {
+  margin: 0 0 1em;
+}
+
+.exported-html-preview__content strong {
+  font-weight: 800;
+}
+
+.exported-html-preview__content s {
+  color: #667085;
+}
+
+.exported-html-preview__content ul,
+.exported-html-preview__content ol {
+  margin: 0 0 1em;
+  padding-left: 1.5rem;
+}
+
+.exported-html-preview__content li + li {
+  margin-top: 0.3rem;
+}
+
+.exported-html-preview__content blockquote {
+  margin: 0 0 1em;
+  padding: 10px 0 10px 16px;
+  border-left: 4px solid #2563eb;
+  background: #f5f8ff;
+  color: #475467;
+}
+
+.exported-html-preview__content pre {
+  overflow-x: auto;
+  margin: 0 0 1em;
+  padding: 14px 16px;
+  border-radius: 7px;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.exported-html-preview__content code,
+.exported-html-preview__source code {
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.exported-html-preview__content code {
+  font-size: 0.92em;
+}
+
+.exported-html-preview__source {
+  overflow-x: auto;
+  margin: 0;
+  padding: 16px 18px;
+  border-top: 1px solid #d9e0ec;
+  background: #101828;
+  color: #d0d5dd;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .exported-html-preview__header,
+  .exported-html-preview__content,
+  .exported-html-preview__source {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
