@@ -94,3 +94,36 @@ export function insertRandomText(editor: Editor) {
 export function insertEmoji(editor: Editor, emoji: string) {
   editor.chain().focus().insertContent(emoji).run()
 }
+
+export function setEditorLink(editor: Editor, rawHref: string) {
+  const href = normalizeHref(rawHref)
+
+  if (!href) {
+    editor.chain().focus().extendMarkRange('link').unsetLink().run()
+    return
+  }
+
+  editor.chain().focus().extendMarkRange('link').setLink({ href }).run()
+}
+
+export function unsetEditorLink(editor: Editor) {
+  editor.chain().focus().extendMarkRange('link').unsetLink().run()
+}
+
+function normalizeHref(rawHref: string) {
+  const href = rawHref.trim()
+
+  if (!href) {
+    return ''
+  }
+
+  if (
+    href.startsWith('/') ||
+    href.startsWith('#') ||
+    /^[a-z][a-z0-9+.-]*:/i.test(href)
+  ) {
+    return href
+  }
+
+  return `https://${href}`
+}

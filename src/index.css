@@ -118,6 +118,67 @@ p {
   padding: 0 10px;
 }
 
+.link-control {
+  position: relative;
+}
+
+.link-control__form {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 15;
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto auto;
+  gap: 8px;
+  width: min(480px, calc(100vw - 32px));
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.link-control__input {
+  min-width: 0;
+  min-height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 10px;
+  color: var(--text);
+}
+
+.link-control__input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.link-control__button {
+  min-height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-muted);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0 12px;
+}
+
+.link-control__button:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.link-control__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.rich-text-editor__content a {
+  color: var(--accent);
+  pointer-events: none;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 .editor-button:hover:not(:disabled),
 .test-action-button:hover:not(:disabled) {
   border-color: var(--accent);
@@ -406,5 +467,16 @@ p {
 
   .editor-test-actions__controls {
     justify-content: flex-start;
+  }
+
+  .link-control {
+    position: static;
+  }
+
+  .link-control__form {
+    right: 12px;
+    left: 12px;
+    grid-template-columns: 1fr;
+    width: auto;
   }
 }
