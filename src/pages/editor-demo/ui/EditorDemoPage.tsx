@@ -1,8 +1,5 @@
 import { RichTextEditor } from '../../../features/rich-text-editor'
-import {
-  mockProofreadingAnnotations,
-  mockProofreadingText,
-} from '../../../features/rich-text-editor/model/proofreading/mockProofreading'
+import { mockProofreadingText } from '../../../features/rich-text-editor/model/proofreading/mockProofreading'
 
 export function EditorDemoPage() {
   return (
@@ -22,7 +19,6 @@ export function EditorDemoPage() {
       <RichTextEditor
         initialContent={`<p>${mockProofreadingText}</p>`}
         placeholder="Напишите текст..."
-        proofreadingAnnotations={mockProofreadingAnnotations}
       />
     </main>
   )

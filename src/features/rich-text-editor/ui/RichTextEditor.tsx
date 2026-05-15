@@ -1,8 +1,12 @@
-import { useEffect, useMemo, useState, type MouseEvent } from 'react'
+import { useMemo, useState, type MouseEvent } from 'react'
 import { EditorContent } from '@tiptap/react'
 
 import { getProofreadingAnnotationRange } from '../model/proofreading/proofreadingExtension'
 import type { ProofreadingAnnotation } from '../model/proofreading/types'
+import {
+  useProofreadingCheck,
+  type ProofreadingStatus,
+} from '../model/proofreading/useProofreadingCheck'
 import { useRichTextEditor } from '../model/useRichTextEditor'
 import type { RichTextEditorProps } from '../types'
 import { EditorTestActions } from './EditorTestActions'
@@ -13,7 +17,6 @@ import { ProofreadingMenu } from './ProofreadingMenu'
 export function RichTextEditor({
   initialContent,
   placeholder,
-  proofreadingAnnotations = [],
 }: RichTextEditorProps) {
   const [exportedHtml, setExportedHtml] = useState('')
   const [activeAnnotationId, setActiveAnnotationId] = useState<string | null>(
@@ -21,18 +24,15 @@ export function RichTextEditor({
   )
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 })
   const editor = useRichTextEditor({ initialContent, placeholder })
+  const { annotations, status, removeAnnotation, ignoreAnnotation } =
+    useProofreadingCheck(editor)
 
   const activeAnnotation = useMemo(
     () =>
-      proofreadingAnnotations.find(
-        (annotation) => annotation.id === activeAnnotationId,
-      ) ?? null,
-    [activeAnnotationId, proofreadingAnnotations],
+      annotations.find((annotation) => annotation.id === activeAnnotationId) ??
+      null,
+    [activeAnnotationId, annotations],
   )
-
-  useEffect(() => {
-    editor?.commands.setProofreadingAnnotations(proofreadingAnnotations)
-  }, [editor, proofreadingAnnotations])
 
   if (!editor) {
     return null
@@ -82,12 +82,12 @@ export function RichTextEditor({
     }
 
     editor.chain().focus().insertContentAt(range, replacement).run()
-    editor.commands.removeProofreadingAnnotation(annotation.id)
+    removeAnnotation(annotation.id)
     setActiveAnnotationId(null)
   }
 
   const handleIgnoreAnnotation = (annotation: ProofreadingAnnotation) => {
-    editor.commands.removeProofreadingAnnotation(annotation.id)
+    ignoreAnnotation(annotation)
     setActiveAnnotationId(null)
   }
 
@@ -103,6 +103,9 @@ export function RichTextEditor({
       </section>
 
       <EditorTestActions editor={editor} onExportHtml={handleExportHtml} />
+      <p className="proofreading-status">
+        {getProofreadingStatusLabel(status)}
+      </p>
       <ExportedHtmlPreview html={exportedHtml} />
 
       {activeAnnotation ? (
@@ -118,4 +121,20 @@ export function RichTextEditor({
       ) : null}
     </div>
   )
+}
+
+function getProofreadingStatusLabel(status: ProofreadingStatus) {
+  switch (status) {
+    case 'waiting':
+      return 'Проверка запланирована через 2 секунды после остановки ввода.'
+    case 'checking':
+      return 'Проверяем текст на сервере...'
+    case 'ready':
+      return 'Проверка завершена.'
+    case 'error':
+      return 'Не удалось проверить текст.'
+    case 'idle':
+    default:
+      return 'Введите текст, чтобы запустить проверку.'
+  }
 }

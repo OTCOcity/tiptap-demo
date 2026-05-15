@@ -2,7 +2,10 @@ import { Extension, type Editor } from '@tiptap/core'
 import { Plugin, PluginKey, type Transaction } from '@tiptap/pm/state'
 import { Decoration, DecorationSet } from '@tiptap/pm/view'
 
-import { textOffsetToDocRange } from './textPositions'
+import {
+  plainTextRangeToDocRange,
+  serializeDocToPlainText,
+} from './plainTextSerializer'
 import type { ProofreadingAnnotation } from './types'
 
 type TrackedProofreadingAnnotation = ProofreadingAnnotation & {
@@ -161,8 +164,14 @@ function createTrackedAnnotations(
   doc: Parameters<typeof DecorationSet.create>[0],
   annotations: ProofreadingAnnotation[],
 ) {
+  const serializedText = serializeDocToPlainText(doc)
+
   return annotations.flatMap((annotation) => {
-    const range = textOffsetToDocRange(doc, annotation.from, annotation.to)
+    const range = plainTextRangeToDocRange(
+      serializedText,
+      annotation.from,
+      annotation.to,
+    )
 
     if (!range) {
       return []
